@@ -7,6 +7,8 @@
 #include <math.h>
 #include <Wire.h>
 
+const char* TAG = "TASK";
+
 TaskHandle_t ReadIMUHandle = NULL;
 
 void ReadIMU(void *parameter) {
@@ -40,19 +42,21 @@ void ReadIMU(void *parameter) {
   float gz = (float)GyZ_cal / IMU_GYRO_SENSIVITY;
 
   float mag_a = sqrt(pow(ax,2) + pow(ay,2) + pow(az,2));
-  Serial.println(mag_a);
-  vTaskDelay(pdMS_TO_TICKS(10));
+  Serial.printf("[%s] Magnitude de: %.2f\n", TAG, mag_a);
+  vTaskDelay(pdMS_TO_TICKS(100));
   }
 };
 
-void setup() {
-  Serial.begin(115200);
+void startIMU();
 
+void setup() {
+
+  Serial.begin(115200);
+  delay(1000);
+  
   Wire.begin(I2C_SDA,I2C_SCL);
 
-  Wire.beginTransmission(IMU_ADDR);
-  Wire.write(0x6B); 
-  Wire.write(0);
+  startIMU();
 
   xTaskCreatePinnedToCore(
     ReadIMU,
@@ -67,4 +71,21 @@ void setup() {
 
 void loop() {
 
+}
+
+void startIMU(){
+  Wire.beginTransmission(IMU_ADDR);
+  Wire.write(0x6B);
+  Wire.write(0);
+  Wire.endTransmission(true);
+
+  Wire.beginTransmission(IMU_ADDR);
+  Wire.write(0x1B);
+  Wire.write(0x18);
+  Wire.endTransmission(true);
+
+  Wire.beginTransmission(IMU_ADDR);
+  Wire.write(0x1C);
+  Wire.write(0x18);
+  Wire.endTransmission(true);
 }
