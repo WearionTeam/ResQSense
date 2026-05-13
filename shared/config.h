@@ -7,14 +7,26 @@
  * @brief Pinos fisicos ESP32
  * 
  */
-#define SPI_MISO    23
-#define SPI_MOSI    19
-#define SPI_SCLK    18
-#define SPI_NSS     15
-#define DIO0        26
-#define NRESET      27
-#define I2C_SDA     4
-#define I2C_SCL     5
+
+ #if defined(U_WROOM) 
+    #define SPI_MISO    23
+    #define SPI_MOSI    19
+    #define SPI_SCLK    18
+    #define SPI_NSS     15
+    #define DIO0        26
+    #define NRESET      27
+    #define I2C_SDA     21
+    #define I2C_SCL     22
+#elif defined(U_32S3)
+    #define SPI_MISO    23
+    #define SPI_MOSI    19
+    #define SPI_SCLK    18
+    #define SPI_NSS     15
+    #define DIO0        26
+    #define NRESET      27
+    #define I2C_SDA     4
+    #define I2C_SCL     5
+#endif
 
 
 /**
