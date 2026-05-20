@@ -17,6 +17,7 @@
     #define NRESET      27
     #define I2C_SDA     21
     #define I2C_SCL     22
+    #define ALERT_PIN   7              /// Pino de Alerta do SEN ou TMP - No código do almeida era 27, verificar isto!
 #elif defined(U_32S3)
     #define SPI_MISO    23
     #define SPI_MOSI    19
@@ -64,5 +65,19 @@
 #define FALL_TIMEOUT        3000            ///< Intervalo de tempo para queda
 #define INACTIVITY_TIME     1500            ///< Intervalo de tempo inactivo
 
+/**
+ * @brief  Constantes dos Sensores de Dados Vitais
+ * 
+ */
+#define PERIOD_MS 10000UL
+#define IGNORE_TIME_MS 180000UL 
+#define MIN_THRESHOLD 2.0f
+#define MAX_THRESHOLD 39.0f
+#define CLOSE_PAIR_THRESHOLD 1.0f 
+#define FAR_SENSOR_THRESHOLD 2.5f 
+
+const int SPO2_MIN_LIMIT = 92;
+const int HR_MAX_LIMIT = 100;
+const int HR_MIN_LIMIT = 60;
 
 #endif
