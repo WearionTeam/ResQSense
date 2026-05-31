@@ -26,6 +26,7 @@
     #define NRESET      27
     #define I2C_SDA     4
     #define I2C_SCL     5
+    #define ISR_PIN     10
 #endif
 
 
@@ -63,6 +64,24 @@
 #define TRESHOLD_GRAVITY    0.10f           ///< Limiar para verificação de x ou y approx de 0
 #define FALL_TIMEOUT        3000            ///< Intervalo de tempo para queda
 #define INACTIVITY_TIME     1500            ///< Intervalo de tempo inactivo
+/**
+ * @brief 
+ * 
+ */
+#define TEMP_SAMPLE_TIME_MS 10000UL
+#define TEMP_MIN 2.0f
+#define TEMP_MAX 39.0f
+#define IGNORE_SENSOR_INTERVAL 180000UL
+#define CLOSE_PAIR_THRESHOLD 1.0f
+#define FAR_SENSOR_THRESHOLD 2.5f
+/**
+ * @brief 
+ * 
+ */
+#define SPO2_MIN 95
+#define HR_MAX  159
+#define HR_MIN  44
+#define SEN_END_CYCLE 60
+#define SEN_SAMPLE_TIME 1000
 
-
-#endif
+ #endif
