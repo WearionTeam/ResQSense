@@ -1,9 +1,20 @@
+/**
+ * @file sensors.cpp
+ * @brief Implementação do módulo de sensores e algoritmos de fusão de dados.
+ * @details Contém a lógica de inicialização de hardware (I2C), leitura de dados em bruto
+ * e a implementação matemática dos algoritmos PDR, Man-down e validação térmica.
+ */
+
 #include "sensors.h"
 
-static Adafruit_TMP117 tmp1;
-static Adafruit_TMP117 tmp2;
-static Adafruit_TMP117 tmp3;
+/** @brief Tag utilizada para logs do sistema no monitor série. */
+const char* SENSORS_TAG = "SENSORS";
 
+static Adafruit_TMP117 tmp1; /**< Instância do sensor de temperatura 1 */
+static Adafruit_TMP117 tmp2; /**< Instância do sensor de temperatura 2 */
+static Adafruit_TMP117 tmp3; /**< Instância do sensor de temperatura 3 */
+
+/** @brief Array que mapeia os sensores físicos de temperatura e o seu estado no barramento I2C. */
 SensorNode sensors[3] = {
   { &tmp1, TMP_ADDR, false, NAN },
   { &tmp2, TMPA_ADDR, false, NAN },
@@ -11,37 +22,42 @@ SensorNode sensors[3] = {
 };
 
 
-static bool start_fall = false;
-static bool impact_check = false;
-static unsigned long fall_time = 0;
-static unsigned long inactive_time = 0;
+// --- Algoritmo Man-Down ---
+static bool start_fall = false;          /**< Indica se um impacto inicial foi detetado */
+static bool impact_check = false;        /**< Indica se estamos a aguardar a verificação de imobilidade */
+static unsigned long fall_time = 0;      /**< Registo do tempo em que a possível queda começou */
+static unsigned long inactive_time = 0;  /**< Registo do tempo em que a imobilidade começou */
 
-static bool gnss_first_fix = false;
-static double lat_ancora = 0.0;
-static double lon_ancora = 0.0;
-static int steps_t_gnss = 0;
-static volatile double imu_radius = 0.0;
-static volatile int current_pdr_state = PDR_STATIC;
+// --- GNSS e Navegação (PDR) ---
+static bool gnss_first_fix = false;      /**< Flag que indica se o GNSS já obteve o primeiro sinal fixo válido */
+static double lat_ancora = 0.0;          /**< Última latitude válida / âncora para fusão com PDR */
+static double lon_ancora = 0.0;          /**< Última longitude válida / âncora para fusão com PDR */
+static float alt_ancora = 0.0;           /**< Última altitude válida */
+static int steps_t_gnss = 0;             /**< Contador de passos dados desde a última atualização do GNSS */
+static volatile double imu_radius = 0.0; /**< Raio de deslocamento estimado pelo IMU */
+static volatile int current_pdr_state = PDR_STATIC; /**< Estado atual do utilizador (Parado, Caminhar, Correr) */
 
-static const float b0 = 0.007820, b1 = 0.015640, b2 = 0.007820;
-static const float a1 = -1.734726, a2 = 0.766007;
-static volatile float x1 = 0, x2 = 0, y_1 = 0, y_2 = 0;
-
+// --- Constantes do filtro Butterworth para Processamento de Sinal (PDR) ---
+static const float b0 = 0.007820, b1 = 0.015640, b2 = 0.007820; /**< Coeficientes do numerador do filtro digital */
+static const float a1 = -1.734726, a2 = 0.766007;               /**< Coeficientes do denominador do filtro digital */
+static volatile float x1 = 0, x2 = 0, y_1 = 0, y_2 = 0;         /**< Buffers de memória do filtro IIR */
 static int steps_temp = 0, count_wd = 0;
 static float max_temp = -100.0, min_temp = 100.0, dyn_treshold = 1.0, diff_mag = 0.0;
 static unsigned long last_step_time = 0;
 
-static volatile bool isrFlag = false;
-static unsigned long lastKick = 0;
+// --- Gestão I2C e ISR ---
+static volatile bool isrFlag = false;          /**< Flag levantada pela interrupção de hardware */
+static unsigned long lastKick = 0;             /**< Timestamp do último watchdog aos sensores */
 static unsigned long systemStartMs = 0;
 static unsigned long lastMaxRead = 0;
 static bool waitingForData = false;
 static unsigned long lastRead_SEN = 0;
 
+// --- Constantes para Temperatura ---
 static bool Flag_lowTemp = false, Flag_highTemp = false, Flag_faultySensor = false;
 static int faultySensorIndex = -1;
-static bool sensorIgnored[3] = { false, false, false };
-static unsigned long ignoreUntil[3] = { 0, 0, 0 };
+static bool sensorIgnored[3] = { false, false, false }; /**< Indica se um sensor está temporariamente na blacklist */
+static unsigned long ignoreUntil[3] = { 0, 0, 0 };      /**< Timestamp até quando o sensor deve ser ignorado */
 static uint32_t counter = 0;
 static float sumCalculatedMeans = 0.0f;
 static uint32_t numCalculatedMeans = 0;
@@ -49,10 +65,18 @@ static float userTemperatureToSend = NAN;
 static bool userTemperatureReadyToSend = false;
 static uint32_t temp_counter = 0;
 
+// --- PPG ---
 static int total_counter_SEN = 0;
 static int HR_counter = 0, HR_total = 0, HR_mean_val = 0;
 static int SPO2_counter = 0, SPO2_total = 0, SPO2_mean_val = 0;
 
+// --- Botão SOS ---
+static int fsr_count = 0; /**< Contador de debounce para o botão SOS */
+
+/**
+ * @brief Interrupação derivado hardware
+ * 
+ */
 void IRAM_ATTR onAlert() {
   isrFlag = true;
 }
@@ -63,10 +87,14 @@ void startIMU()
     Wire.write(0x6B);
     Wire.write(0);
     Wire.endTransmission(true);
+
+    // Configurar a escala do Giroscópio
     Wire.beginTransmission(IMU_ADDR);
     Wire.write(0x1B);
     Wire.write(0x18);
     Wire.endTransmission(true);
+
+    // Configurar a escala do Acelerómetro
     Wire.beginTransmission(IMU_ADDR);
     Wire.write(0x1C);
     Wire.write(0x18);
@@ -86,7 +114,7 @@ void startGNSS(DFRobot_GNSSAndRTC_I2C &component)
 void readIMU(sensors_data &component)
 {
     Wire.beginTransmission(IMU_ADDR);
-    Wire.write(0x3B);
+    Wire.write(0x3B); // Primeiro endereço com os dados, pode ser visto nos datasheet do MPU-6050
     Wire.endTransmission(false);
     Wire.requestFrom(IMU_ADDR, 14);
 
@@ -98,8 +126,7 @@ void readIMU(sensors_data &component)
     uint16_t GyY_raw = Wire.read() << 8 | Wire.read(); 
     uint16_t GyZ_raw = Wire.read() << 8 | Wire.read();
 
-    //Wire.endTransmission();
-
+    // Aplicação de offsets
     int16_t AcX_cal = AcX_raw - IMU_OFFSET_ACCEL_Z;
     int16_t AcY_cal = AcY_raw - IMU_OFFSET_ACCEL_Y;
     int16_t AcZ_cal = AcZ_raw - IMU_OFFSET_ACCEL_Z;
@@ -107,6 +134,7 @@ void readIMU(sensors_data &component)
     int16_t GyY_cal = GyY_raw - IMU_OFFSET_GYRO_Y;
     int16_t GyZ_cal = GyZ_raw - IMU_OFFSET_GYRO_Z;
 
+    // Conversão para unidades SI g e º/s
     component.ax = ((float)AcX_cal / IMU_ACCEL_SENSIVITY);
     component.ay = ((float)AcY_cal / IMU_ACCEL_SENSIVITY);
     component.az = ((float)AcZ_cal / IMU_ACCEL_SENSIVITY);     
@@ -118,6 +146,7 @@ void readIMU(sensors_data &component)
 
 void mandown(processed_data &component,float az,float ax)
 {
+  // Deteção de queda livre
   if ( component.mag_a <= TRESHOLD_FALL ){
     if(!start_fall){
       start_fall = true;
@@ -125,9 +154,11 @@ void mandown(processed_data &component,float az,float ax)
     }
   }
 
+  // Após começar uma queda, avaliar o impact
   if ( start_fall ){
+    // FALL_TIMEOUT é pequeno, para quedas muito grandes talvez falhava
     if( millis() - fall_time >= FALL_TIMEOUT){
-      start_fall = false;
+      start_fall = false; // Se passar do tempo predefenido para queda, deteta um falso positivo
     } else if( component.mag_a >= TRESHOLD_IMPACT){
       
       impact_check = true;
@@ -137,6 +168,7 @@ void mandown(processed_data &component,float az,float ax)
     } 
   }
 
+  // Avaliação de imobilidade
   if ( impact_check ){
     if ( millis() - inactive_time >= INACTIVITY_TIME && (1 + TRESHOLD_GRAVITY >= abs(az) && abs(az) >= 1 - TRESHOLD_GRAVITY || 1 + TRESHOLD_GRAVITY >= abs(ax) && abs(ax) >= 1 - TRESHOLD_GRAVITY )) {
       impact_check = false;
@@ -151,17 +183,35 @@ void readGNSS(sensors_data &component, DFRobot_GNSSAndRTC_I2C &gps)
   DFRobot_GNSS::sLonLat_t lonInfo = gps.getLon();
   uint8_t numSats = gps.getNumSatUsed();
   Serial.printf("Num of sattelites: %i\n",numSats);
-  component.lat = latInfo.latitude;
-  component.lon = lonInfo.lonitude;
-  component.alt = gps.getAlt();    
+  if (numSats>=3)
+  {
+    double final_lat = latInfo.latitudeDegree;
+    double final_lon = lonInfo.lonitudeDegree; 
+
+    // Mudança de direção, a biblioteca DFRobot_GNSSAndRTC_I2C tem estas duas direções
+    // trocadas no parsing da mensagem NMEAA
+    if (latInfo.latDirection == 'W') final_lon *= -1.0;
+    if (lonInfo.lonDirection == 'S') final_lat *= -1.0; 
+    
+    component.lat = final_lat;
+    component.lon = final_lon;
+    component.alt = gps.getAlt();
+    component.gnss_updated = true;
+  } else {
+    component.gnss_updated = false;
+  }
+    
 }
 
 void pdr(float magnitude)
 {
   float t = millis()/1000.0;
-  float dyn_mag = magnitude - 1;
+  float dyn_mag = magnitude - 1; // Remove a componente da gravidade (1G)
+
+  // Aplicação de um filtro passa baixo, buttersworth
   float filtered_mag = b0 * dyn_mag + b1 * x1 + b2 * x2 - a1 * y_1 - a2 * y_2;
 
+  // Atualização de valores máximos e mínimos para limiar dinâmico
   if (filtered_mag > max_temp) max_temp = filtered_mag;
   if (filtered_mag < min_temp) min_temp = filtered_mag;
 
@@ -172,10 +222,12 @@ void pdr(float magnitude)
     max_temp = -100.0; min_temp = 100.0; count_wd = 0;
   }
 
+  // Deteção de um pico 
   if ((y_1>filtered_mag) && (y_1>y_2) && (y_1>dyn_treshold) && (diff_mag>1.0))
   {
     float delta_t = t - last_step_time;
 
+    // Filtra falsos passos validando a janela de tempo entre eles
     if((delta_t > 0.30) && (delta_t < 1.50))
     {
       steps_temp++;
@@ -189,10 +241,10 @@ void pdr(float magnitude)
 
         if (local_state == PDR_WALK)
         {
-          stride_length = 0.72;
+          stride_length = 0.72; // Comprimento médio de passada a caminhar
         } else if (local_state == PDR_RUN)
         {
-          stride_length = 0.99;
+          stride_length = 0.99; // Comprimento médio de passada a correr
         }        
         steps_t_gnss += i;
         imu_radius += (stride_length * i);
@@ -217,11 +269,12 @@ void processSensorFusion(sensors_data &measurements, processed_data &info) {
   mandown(info, measurements.az, measurements.ax);
   pdr(info.mag_a);
 
-  // Lógica do GNSS que estava no main.cpp veio para aqui:
+  // Fusão de dados de Posicionamento GNSS + Dead Reckoning
   if (measurements.gnss_updated) {
     if (!gnss_first_fix) { 
       lat_ancora = measurements.lat;
       lon_ancora = measurements.lon;
+      alt_ancora = measurements.alt;
       gnss_first_fix = true;
     } else {
       double lat_rad = lat_ancora * (PI / 180.0);
@@ -229,6 +282,7 @@ void processSensorFusion(sensors_data &measurements, processed_data &info) {
       double dy = (measurements.lat - lat_ancora) * 111000.0;
       double dist_gnss = sqrt(dx*dx + dy*dy);
 
+      // Atualiza estimativa de posição fundindo PDR se a diferença GNSS for significativa
       if (dist_gnss > 0.1) {
           double cx = (dx / dist_gnss) * imu_radius;
           double cy = (dy / dist_gnss) * imu_radius;
@@ -244,6 +298,7 @@ void processSensorFusion(sensors_data &measurements, processed_data &info) {
     } 
     info.lat = lat_ancora;
     info.lon = lon_ancora;
+    info.alt = alt_ancora;
   }
 }
 
@@ -328,6 +383,15 @@ void ignoreSensor(int idx, unsigned long now)
   Serial.printf("SENSOR_IGNORED | sensor_addr=0x%02X | ms=%lu | ignoreUntil=%lu\r\n", sensors[idx].addr, now, ignoreUntil[idx]);
 }
 
+/**
+ * @brief Deteta discrepâncias térmicas entre os 3 sensores.
+ * @details Se um sensor divergir mais do que o limite estipulado em relação aos restantes pares,
+ * o mesmo é marcado como falho e inserido na blacklist temporária.
+ * @param validMask Máscara a atualizar com os resultados da deteção.
+ * @param temps Array de leituras em graus Celsius.
+ * @param now Timestamp atual em milissegundos.
+ * @return true se alguma anomalia foi encontrada, false se tudo estiver dentro do normal.
+ */
 bool faultySensorDetection(bool validMask[3], float temps[3], unsigned long now) 
 {
   Flag_faultySensor = false;
@@ -367,6 +431,8 @@ void readPPG(DFRobot_BloodOxygen_S_I2C &sen, sensors_data &component)
 void processPPG(sensors_data &component, processed_data &info)
 {
   total_counter_SEN++;
+
+  // Condição que filtra só os valores normais de spo2
   if (component.spo2 > 50 && component.spo2 < 101) {
     SPO2_counter++;
     SPO2_total += component.spo2;
@@ -376,6 +442,7 @@ void processPPG(sensors_data &component, processed_data &info)
     HR_total += component.hr;
   } 
 
+  // Ao terminar o ciclo de amostragem, calcula as médias para reduzir ruído
   if (total_counter_SEN >= SEN_END_CYCLE) {
   SPO2_mean_val = (SPO2_counter > 0) ? (SPO2_total / SPO2_counter) : 0;
   HR_mean_val = (HR_counter > 0) ? (HR_total / HR_counter) : 0;
@@ -414,10 +481,10 @@ void readTemperatureSensors(float temps[3], bool validMask[3], unsigned long now
 }
 
 void processTemperatureData(float temps[3], bool validMask[3], unsigned long now, processed_data &info) {
-  // 1. Deteção de falhas (pode alterar a validMask)
+  // Deteção de falhas (pode alterar a validMask)
   faultySensorDetection(validMask, temps, now);
 
-  // 2. Cálculo da soma e contagem de sensores válidos
+  // Cálculo da soma e contagem de sensores válidos
   float sum = 0.0f;
   uint8_t validCount = 0;
   for (int i = 0; i < 3; i++) {
@@ -427,7 +494,7 @@ void processTemperatureData(float temps[3], bool validMask[3], unsigned long now
     }
   }
 
-  // 3. Atualizar struct com base nas médias
+  // Atualizar struct com base nas médias
   if (validCount > 0) {
     float mean = sum / validCount;
     
@@ -440,8 +507,22 @@ void processTemperatureData(float temps[3], bool validMask[3], unsigned long now
   } else {
     info.temp = NAN; 
   }
-
-  // 4. Acordar sensores para o próximo ciclo de leitura
-  //kickAllSensors();
 }
 
+void checkSOS(processed_data &info) {
+  int sos_value = analogRead(FSR_PIN);
+
+  // Lógica de debouncing analógica baseada no valor lido do sensor
+  if (sos_value < 200)
+  {
+    fsr_count = 0;
+    info.sos_alert = false;
+  } else if (sos_value < 3000 ) {
+    fsr_count = 0;  
+    info.sos_alert = false; 
+  } else if (sos_value >= 3000 && fsr_count <= 1 ) {
+    fsr_count++;
+  } else if (sos_value >= 3000 && fsr_count > 1) {
+    info.sos_alert = true; 
+  }
+}
