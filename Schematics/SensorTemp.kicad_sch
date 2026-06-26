@@ -1,0 +1,6055 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "656dbe32-68e8-4fa1-a3fe-86d611dd45dd")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Sensor_Temperature:TMP117xxDRV"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -2.54 10.795 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "TMP117xxDRV"
+				(at -2.54 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+				(at 1.27 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmp117.pdf"
+				(at 1.27 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "digital temperature sensor i2c smbus nist"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "WSON*1EP?2x2mm?P0.65mm?EP1x1.6mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TMP117xxDRV_0_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TMP117xxDRV_1_1"
+				(polyline
+					(pts
+						(xy 2.413 1.905) (xy 2.413 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 1.905) (xy 3.048 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 1.27) (xy 3.048 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 0.635) (xy 3.048 0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 0) (xy 3.048 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 -0.635) (xy 3.048 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.413 1.905)
+					(mid 3.048 2.5373)
+					(end 3.683 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.048 -3.81)
+					(radius 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.683 1.905) (xy 3.683 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.683 -3.175)
+					(end 2.413 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "ADD0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "ALERT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:CAP_CERAMIC0603_NO"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -2.29 1.25 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 2.3 1.25 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "lixo:0603-NO"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ceramic Capacitors\n\nFor new designs, use the packages preceded by an '_' character since they are more reliable:\n\nThe following footprints should be used on most boards:\n\n• _0402 - Standard footprint for regular board layouts\n• _0603 - Standard footprint for regular board layouts\n• _0805 - Standard footprint for regular board layouts\n• _1206 - Standard footprint for regular board layouts\n\nFor extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):\n\n• _0402MP - Micro-pitch footprint for very dense/compact boards\n• _0603MP - Micro-pitch footprint for very dense/compact boards\n• _0805MP - Micro-pitch footprint for very dense/compact boards\n• _1206MP - Micro-pitch footprint for very dense/compact boards"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CAP_CERAMIC0603_NO_1_0"
+				(rectangle
+					(start -1.27 1.524)
+					(end 1.27 2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 0.508)
+					(end 1.27 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:CAP_CERAMIC0805-NOOUTLINE"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -2.29 1.25 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 2.3 1.25 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "lixo:0805-NO"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ceramic Capacitors\n\nFor new designs, use the packages preceded by an '_' character since they are more reliable:\n\nThe following footprints should be used on most boards:\n\n• _0402 - Standard footprint for regular board layouts\n• _0603 - Standard footprint for regular board layouts\n• _0805 - Standard footprint for regular board layouts\n• _1206 - Standard footprint for regular board layouts\n\nFor extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):\n\n• _0402MP - Micro-pitch footprint for very dense/compact boards\n• _0603MP - Micro-pitch footprint for very dense/compact boards\n• _0805MP - Micro-pitch footprint for very dense/compact boards\n• _1206MP - Micro-pitch footprint for very dense/compact boards"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CAP_CERAMIC0805-NOOUTLINE_1_0"
+				(rectangle
+					(start -1.27 1.524)
+					(end 1.27 2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.27 0.508)
+					(end 1.27 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:GND"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -1.524 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_1_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:HEADER-1X670MIL"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at -6.35 10.795 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -6.35 -10.16 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "lixo:1X06_ROUND_70"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "PIN HEADER"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HEADER-1X670MIL_1_0"
+				(polyline
+					(pts
+						(xy -6.35 10.16) (xy -6.35 -7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -7.62) (xy 1.27 -7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 10.16) (xy -6.35 10.16)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 1.27 10.16)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 7.62 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 5.08 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at -2.54 -5.08 0)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:LED0603_NOOUTLINE"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -1.27 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+				)
+			)
+			(property "Value" ""
+				(at -1.27 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+				)
+			)
+			(property "Footprint" "lixo:CHIPLED_0603_NOOUTLINE"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "LED\n\n0603 - 0603 Surface Mount Package\n\n2mA:\n\n• Green LED - Low Power (3.9mcd, 2ma, 1.7Vf) - Digikey: 475-2709-2-ND\n• Orange LED - Low Power (9.8mcd, 2ma, 1.8Vf) - Digikey: 475-1194-2-ND\n• Red LED - Low Power (5mcd, 2ma, 1.8Vf) - Digikey: 475-1195-2-ND\n• Yellow LED - Low Power (7mcd, 2ma, 1.8Vf) - Digikey: 475-1196-2-ND\n\n5mA:\n\n• Blue LED - Low Power (17mcd, 5ma, 2.9Vf) - Digikey: LNJ937W8CRACT-ND\n\n0805 - 0805 Surface Mount Package\n\n2mA:\n\n• Red LED (8.8mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2510-1-ND]\n• Green LED (5mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2730-1-ND]\n• Yellow LED (11.3mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2555-1-ND]\n\n20mA:\n\n• Red LED (104mcd, 20mA, Diffused) - LS R976 [Digikey: 475-1278-6-ND]\n• Red LED (12mcd, 20mA, 2.0Vf, Clear) - APT2012EC [Digikey: 754-1128-1-ND]\n• Green LED (15mcd, 20mA, 2.2Vf, Clear) - APT2012GC [Digikey: 754-1131-1-ND]\n• Orange LED (160mcd, 20mA, 2.1Vf, Clear) - APT2012SECK [Digikey: 754-1130-1-ND]\n\n• 1206 - 1206 Surface Mount Package\n\n• Green LED (26mcd, 20mA, Diffused) - LG N971  [Digikey: 475-1407-6-ND]\n• Red LED (15mcd, 20mA, Diffused) - LH N974 [Digikey: 475-1416-6-ND]\n\n• Cree - Cree High-Power Surface Mount LEDs\n\n• XPEBWT-L1-0000-00D50 - White 111lm 350mA 2.9Vf 6200K 110°\n• XTEAWT-00-0000-00000LEE3 - White 114lm 350mA 2.85Vf 5000K 115°\n\n• Everlight - Everlight 45-21 Series Surface Mount LEDs\n\n• 45-21/QK2C-B2832AC2CB2/2T - Warm White 2000mcd 20mA 3.25Vf 3050K 120°\n• 45-21/LK2C-B38452C4CB2/2T - Nuetral White 2000mcd 20mA 3.25Vf 4150K 120°\n• 45-21/LK2C-B50634C6CB2/2T - Cold White 2200mcd 20mA 3.25Vf 5650K 120°\n\n• PLCC2 Reverse Mount\n\n• LS T77K-J1L2-1-0-2-R18-Z - Red 11.25mcd 2mA 1.8Vf 630nm 120°\n• LO T77K-L1M2-24-Z - Orange 19.6mcd 2mA 1.8Vf 606nm 120°\n• LY T77K-K2M1-26-Z - Yellow 15.7mcd 2mA 1.8Vf 587nm 120°"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED0603_NOOUTLINE_1_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy -0.635 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.9525 2.8575) (xy -0.3175 2.2225)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 1.27) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3175 2.2225) (xy 0 3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.175) (xy -0.9525 2.8575)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.3175 2.8575) (xy 0.9525 2.2225)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.9525 2.2225) (xy 1.27 3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.175) (xy 0.3175 2.8575)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:RESISTOR_0603_NOOUT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.016 1.016)
+						(thickness 0.2032)
+						(bold yes)
+					)
+				)
+			)
+			(property "Footprint" "lixo:0603-NO"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistors\n\nFor new designs, use the packages preceded by an '_' character since they are more reliable:\n\nThe following footprints should be used on most boards:\n\n• _0402 - Standard footprint for regular board layouts\n• _0603 - Standard footprint for regular board layouts\n• _0805 - Standard footprint for regular board layouts\n• _1206 - Standard footprint for regular board layouts\n\nFor extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):\n\n• _0402MP - Micro-pitch footprint for very dense/compact boards\n• _0603MP - Micro-pitch footprint for very dense/compact boards\n• _0805MP - Micro-pitch footprint for very dense/compact boards\n• _1206MP - Micro-pitch footprint for very dense/compact boards"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RESISTOR_0603_NOOUT_1_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:RESISTOR_4PACK"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.016 1.016)
+						(thickness 0.2032)
+						(bold yes)
+					)
+				)
+			)
+			(property "Footprint" "lixo:RESPACK_4X0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor Packs (4 resistors)\n\n4 x 0603\n\n• 10K 1/16W - Digikey: YC164J-10KCT-ND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RESISTOR_4PACK_1_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RESISTOR_4PACK_2_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RESISTOR_4PACK_3_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(symbol "RESISTOR_4PACK_4_0"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:SOLDERJUMPER"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SJ"
+				(at -2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "lixo:SOLDERJUMPER_ARROW_NOPASTE"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SMD Solder JUMPER\n\nSolder the two pads together to create a connection, or remove the solder to break it.\n\nREFLOW - Use this footprint for solder paste and reflow ovens. WAVE - Use this footprint for hand-soldering (larger pads).\n\nCLOSED - Has a trace between the two pads to ensure it is closed by default.  The trace needs to be cut to disable the jumper, and can be closed again by creating a solder bridge between the two pads."
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SOLDERJUMPER_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.651 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.381 -0.635)
+					(mid -1.0159 0.0001)
+					(end -0.3808 0.635)
+					(stroke
+						(width 1.27)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.381 0.635)
+					(mid 1.0159 -0.0001)
+					(end 0.3808 -0.635)
+					(stroke
+						(width 1.27)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.651 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:STEMMA_I2C_QT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "CONN"
+				(at -3.81 8.255 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -3.81 -7.62 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "lixo:JST_SH4"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "STEMMA_I2C_QT_1_0"
+				(polyline
+					(pts
+						(xy -3.81 7.62) (xy -3.81 -5.08)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -5.08) (xy 3.81 -5.08)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 7.62) (xy -3.81 7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -5.08) (xy 3.81 7.62)
+					)
+					(stroke
+						(width 0.4064)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive inverted
+					(at 0 5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at 0 2.54 0)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at 0 0 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive inverted
+					(at 0 -2.54 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(symbol "STEMMA_I2C_QT_2_0"
+				(pin bidirectional line
+					(at 0 0 0)
+					(length 5.08)
+					(name "MT"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "MT1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(symbol "STEMMA_I2C_QT_3_0"
+				(pin bidirectional line
+					(at 0 0 0)
+					(length 5.08)
+					(name "MT"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "MT2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:TMP117_WSON"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "X"
+				(at -10.16 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -10.16 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "lixo:WSON-6"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TMP117_WSON_1_0"
+				(polyline
+					(pts
+						(xy -10.16 10.16) (xy 10.16 10.16)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 5.08) (xy -10.16 10.16)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 5.08) (xy 10.16 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -7.62) (xy -10.16 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -7.62) (xy -10.16 -12.7)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -10.16 -12.7) (xy 10.16 -12.7)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 10.16) (xy 10.16 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 5.08) (xy 10.16 -7.62)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -7.62) (xy -10.16 -7.62)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -12.7) (xy 10.16 -7.62)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "VDD:\nTemp:"
+					(at -2.54 -10.16 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+							(thickness 0.2159)
+							(bold yes)
+						)
+						(justify right)
+					)
+				)
+				(text "1.8-5.5V\n-55~~150°C"
+					(at -1.27 -10.16 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+							(thickness 0.2159)
+							(bold yes)
+						)
+						(justify left)
+					)
+				)
+				(text "TMP117 Precision\nTemperature Sensor"
+					(at 0 7.62 0)
+					(effects
+						(font
+							(size 1.27 1.0795)
+							(thickness 0.2159)
+							(bold yes)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 2.54 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 0 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "ADDR"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -12.7 -5.08 0)
+					(length 2.54)
+					(name "ALERT"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 12.7 -5.08 180)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:VCC"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#P+"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -2.54 90)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VCC_1_0"
+				(polyline
+					(pts
+						(xy 0 0) (xy -1.27 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.905) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lixo-eagle-import:supply1_371_GND"
+			(power)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#GND"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SUPPLY SYMBOL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "supply1_371_GND_1_0"
+				(polyline
+					(pts
+						(xy -1.905 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Power supply"
+		(exclude_from_sim no)
+		(at 27.94 58.42 0)
+		(effects
+			(font
+				(size 2.1844 1.8567)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a74c2e1-d6c2-4f92-9720-aac1f7e6547f")
+	)
+	(text "ON LED"
+		(exclude_from_sim no)
+		(at 91.44 58.42 0)
+		(effects
+			(font
+				(size 2.1844 1.8567)
+			)
+			(justify left bottom)
+		)
+		(uuid "1b43c664-8472-4fa0-a93a-da412a93f384")
+	)
+	(text "STEMMA/I2C Headers"
+		(exclude_from_sim no)
+		(at 213.36 58.42 0)
+		(effects
+			(font
+				(size 2.1844 1.8567)
+			)
+			(justify left bottom)
+		)
+		(uuid "5dbf8d50-bac3-4b78-8f0a-ca3451557f82")
+	)
+	(text "I2C Pullups & Shift"
+		(exclude_from_sim no)
+		(at 114.3 58.42 0)
+		(effects
+			(font
+				(size 2.1844 1.8567)
+			)
+			(justify left bottom)
+		)
+		(uuid "abb4c0b3-1105-42ea-8464-b2cc456e3e45")
+	)
+	(junction
+		(at 256.54 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "69700a72-07f1-4bd2-8da9-5fa2364c6a4b")
+	)
+	(junction
+		(at 226.06 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7d723829-ffd0-45a1-92c3-55c6acf74cc7")
+	)
+	(junction
+		(at 256.54 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9b4f4588-9f6e-4ec2-9a19-34b6bed3bc55")
+	)
+	(junction
+		(at 226.06 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a7fe32c3-eb90-4cac-a001-a4981b2421b2")
+	)
+	(junction
+		(at 116.84 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d78869b4-0746-489c-889f-0c845c644b7e")
+	)
+	(wire
+		(pts
+			(xy 226.06 22.86) (xy 226.06 25.4)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0585d869-bcc0-423e-a1c7-c0412e63b11e")
+	)
+	(polyline
+		(pts
+			(xy 210.82 17.78) (xy 210.82 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "06a7c8cb-de55-4303-ab0f-acbd375f3ea5")
+	)
+	(wire
+		(pts
+			(xy 53.34 81.28) (xy 53.34 76.2)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0a123736-5d4d-4a78-9095-2680067adca8")
+	)
+	(polyline
+		(pts
+			(xy 109.22 60.96) (xy 210.82 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "0fa7565b-e47d-4d98-85fc-88b76ac5bbbf")
+	)
+	(polyline
+		(pts
+			(xy 22.86 60.96) (xy 88.9 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "27bd4608-a1a3-40b5-ade3-27081bb5728e")
+	)
+	(polyline
+		(pts
+			(xy 88.9 17.78) (xy 88.9 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2c6bab06-7c23-4ddd-bcab-81828e652f98")
+	)
+	(wire
+		(pts
+			(xy 81.28 40.64) (xy 81.28 45.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2ce4f2cc-c6e0-4e4d-b91c-8bec2279b461")
+	)
+	(wire
+		(pts
+			(xy 259.08 35.56) (xy 256.54 35.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "37cf1201-90c7-4255-a1de-71f5ff0216c5")
+	)
+	(wire
+		(pts
+			(xy 60.96 86.36) (xy 48.26 86.36)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3ad78dfb-715d-4fae-bd44-118473ca6a7b")
+	)
+	(wire
+		(pts
+			(xy 30.48 45.72) (xy 30.48 38.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "40938281-471a-4db1-a9ac-860b2864812f")
+	)
+	(wire
+		(pts
+			(xy 104.14 99.06) (xy 104.14 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "40af0422-145e-4e10-96c7-d89c033f4e2c")
+	)
+	(wire
+		(pts
+			(xy 149.86 27.94) (xy 149.86 25.4)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "45e8295f-e102-4441-a87f-a6ba9de36b0c")
+	)
+	(wire
+		(pts
+			(xy 172.72 91.44) (xy 172.72 83.82)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4933806b-0e87-4d3d-9273-fbdfc5da9743")
+	)
+	(wire
+		(pts
+			(xy 226.06 25.4) (xy 226.06 35.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "51da0b42-9203-47de-add9-2fe9761de46f")
+	)
+	(wire
+		(pts
+			(xy 226.06 43.18) (xy 259.08 43.18)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "57452e4d-14d0-42ee-9e7a-5f25cc580e2a")
+	)
+	(wire
+		(pts
+			(xy 167.64 99.06) (xy 172.72 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5bffba5f-cbf3-4f61-8646-b9646ea6f566")
+	)
+	(polyline
+		(pts
+			(xy 210.82 60.96) (xy 276.86 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5e77a6f4-dac8-4cfc-ab61-2062638bfb12")
+	)
+	(wire
+		(pts
+			(xy 142.24 38.1) (xy 142.24 50.8)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "62fb2548-1b4c-4309-b94e-9cb1b924cb70")
+	)
+	(wire
+		(pts
+			(xy 60.96 83.82) (xy 71.12 83.82)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "64804cfd-86be-48ae-8d9c-3374527635b8")
+	)
+	(wire
+		(pts
+			(xy 30.48 27.94) (xy 30.48 30.48)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "70c4756d-980f-4bf6-bf8e-712a31904ac7")
+	)
+	(wire
+		(pts
+			(xy 116.84 96.52) (xy 111.76 96.52)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "714da269-90a5-438f-b61c-813a62509960")
+	)
+	(polyline
+		(pts
+			(xy 109.22 17.78) (xy 109.22 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "72971c28-0efe-499c-9ac4-dc56baa73f58")
+	)
+	(wire
+		(pts
+			(xy 256.54 22.86) (xy 256.54 25.4)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "761a0bcb-47c1-465a-8289-8357623c7101")
+	)
+	(wire
+		(pts
+			(xy 172.72 99.06) (xy 172.72 106.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "795c7441-7cb3-4c9a-b04f-0d47b15fd390")
+	)
+	(wire
+		(pts
+			(xy 116.84 81.28) (xy 116.84 83.82)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7e47f745-7131-4e61-b2e2-249d333a7f07")
+	)
+	(wire
+		(pts
+			(xy 149.86 40.64) (xy 124.46 40.64)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "84184505-087e-4703-83ed-0ad29b1a2832")
+	)
+	(wire
+		(pts
+			(xy 256.54 35.56) (xy 226.06 35.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "84b400ce-b671-446e-8f72-b474e6bf1acd")
+	)
+	(wire
+		(pts
+			(xy 60.96 91.44) (xy 48.26 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "86917d52-8778-462d-b13e-d5c9a3797c92")
+	)
+	(wire
+		(pts
+			(xy 111.76 83.82) (xy 111.76 81.28)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "897d10b9-b6ff-493e-bd66-dddf6a6bd9e7")
+	)
+	(wire
+		(pts
+			(xy 167.64 91.44) (xy 172.72 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8d35587a-6968-4bb3-a4bd-497564456178")
+	)
+	(wire
+		(pts
+			(xy 60.96 88.9) (xy 48.26 88.9)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9243b41c-ddd8-4ecd-aa6c-efceeafa2e21")
+	)
+	(wire
+		(pts
+			(xy 111.76 96.52) (xy 111.76 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "95a757b7-04c5-4b7c-b825-14168008c12a")
+	)
+	(wire
+		(pts
+			(xy 142.24 99.06) (xy 104.14 99.06)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9e87a251-cf80-491f-bf11-b5b983961616")
+	)
+	(wire
+		(pts
+			(xy 99.06 40.64) (xy 99.06 38.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "aa6dfe19-16a8-47fe-9666-27cc492e97ab")
+	)
+	(wire
+		(pts
+			(xy 256.54 25.4) (xy 256.54 35.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b6edf8fe-bada-4e2e-b57a-e6a76d2ee663")
+	)
+	(wire
+		(pts
+			(xy 60.96 93.98) (xy 48.26 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b8fc0d72-747a-4142-862c-a32742e3c24b")
+	)
+	(wire
+		(pts
+			(xy 142.24 96.52) (xy 116.84 96.52)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bb2dd881-83bc-4a49-a140-4d69a7d89e1f")
+	)
+	(wire
+		(pts
+			(xy 124.46 93.98) (xy 142.24 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ce1cfdb7-ec5a-4c51-904d-1698557ea36f")
+	)
+	(wire
+		(pts
+			(xy 142.24 25.4) (xy 142.24 27.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d4edd64e-bc2c-4860-9642-c51405ba5dff")
+	)
+	(wire
+		(pts
+			(xy 81.28 27.94) (xy 81.28 33.02)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d540cce3-4be4-4f71-8581-693015dd1609")
+	)
+	(wire
+		(pts
+			(xy 116.84 96.52) (xy 116.84 93.98)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "dfbcbe84-28dc-4d96-9889-d17f05301b72")
+	)
+	(wire
+		(pts
+			(xy 142.24 91.44) (xy 124.46 91.44)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e28a7639-f000-44ad-bd3c-5723afeef664")
+	)
+	(wire
+		(pts
+			(xy 142.24 50.8) (xy 124.46 50.8)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e47eb675-a2f7-483b-a4c9-af999bd691ab")
+	)
+	(wire
+		(pts
+			(xy 104.14 81.28) (xy 104.14 83.82)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ee286b62-41a5-4772-8e14-f5a4280dac88")
+	)
+	(wire
+		(pts
+			(xy 149.86 38.1) (xy 149.86 40.64)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "efdf02a6-02ba-4104-b72a-6db0a076c48c")
+	)
+	(wire
+		(pts
+			(xy 259.08 40.64) (xy 226.06 40.64)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f082d500-f05d-4bcd-bf7d-2ee12b7d4359")
+	)
+	(wire
+		(pts
+			(xy 226.06 38.1) (xy 259.08 38.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f524cf8a-d742-4737-977d-882b8d276037")
+	)
+	(wire
+		(pts
+			(xy 71.12 83.82) (xy 71.12 86.36)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f903923f-bfe1-41dc-bcc7-bfb417600b25")
+	)
+	(wire
+		(pts
+			(xy 60.96 81.28) (xy 53.34 81.28)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fc2f59e4-1e0a-4327-ac21-e7dcc7878709")
+	)
+	(polyline
+		(pts
+			(xy 88.9 60.96) (xy 109.22 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fdeab6a2-0bd0-497f-aff0-3f9b34a34271")
+	)
+	(label "SCL"
+		(at 48.26 86.36 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "17f31a69-acd0-4088-b966-d3e2505b3f93")
+	)
+	(label "ADDR"
+		(at 48.26 93.98 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "22b01c8d-a14a-4a39-9056-c21c3cf5757f")
+	)
+	(label "SDA"
+		(at 48.26 88.9 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "3781e681-6dc9-4ade-a197-c5f93d7ec837")
+	)
+	(label "SCL"
+		(at 124.46 91.44 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a87a246-fc19-4672-9b61-fc944ab5eeff")
+	)
+	(label "INT"
+		(at 48.26 91.44 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ca286d6-f223-46fe-aee9-bf5fe84124d7")
+	)
+	(label "SCL"
+		(at 241.3 43.18 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "86a8ee4b-0233-4607-8cc9-928f0f8f4480")
+	)
+	(label "GND"
+		(at 241.3 35.56 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "8968cada-0912-4917-8eef-d054c06ec884")
+	)
+	(label "SDA"
+		(at 241.3 40.64 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f57e0bb-c8d2-4f4f-b40c-f3a691ff4dd1")
+	)
+	(label "ADDR"
+		(at 124.46 96.52 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0b6e072-792a-4ed2-ae49-bb33e8a9536c")
+	)
+	(label "SDA"
+		(at 124.46 93.98 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba9b02d4-cf26-4fef-b590-817710581302")
+	)
+	(label "SDA"
+		(at 134.62 40.64 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "c325dac5-08d9-4eb2-b9b5-a4cb694fb906")
+	)
+	(label "INT"
+		(at 124.46 99.06 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "c40ac6b3-3841-4e65-bd2e-c6de548e35e2")
+	)
+	(label "SCL"
+		(at 134.62 50.8 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa7a9daf-ede1-4c46-929a-517e23703a1a")
+	)
+	(label "VCC"
+		(at 241.3 38.1 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "fbff9558-074a-4850-ba7d-e2e6bf2fa7c2")
+	)
+	(hierarchical_label "VIN"
+		(shape input)
+		(at 118.11 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5d5f44b-daf8-48fe-8ceb-b99c8030ee2a")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 118.11 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5d5f44b-daf8-48fe-8ceb-b99c8030ee2b")
+	)
+	(hierarchical_label "SCL"
+		(shape input)
+		(at 118.11 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5d5f44b-daf8-48fe-8ceb-b99c8030ee2c")
+	)
+	(hierarchical_label "SDA"
+		(shape input)
+		(at 118.11 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5d5f44b-daf8-48fe-8ceb-b99c8030ee2d")
+	)
+	(hierarchical_label "INT"
+		(shape input)
+		(at 118.11 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5d5f44b-daf8-48fe-8ceb-b99c8030ee2e")
+	)
+	(hierarchical_label "ADDR"
+		(shape input)
+		(at 118.11 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5d5f44b-daf8-48fe-8ceb-b99c8030ee2f")
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:RESISTOR_4PACK")
+		(at 104.14 88.9 270)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "049ae6b6-fc26-4aa1-9847-87be63d0db41")
+		(property "Reference" "R2"
+			(at 106.68 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 104.14 88.9 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+					(thickness 0.2032)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" "lixo:RESPACK_4X0603"
+			(at 104.14 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "8ecc8a7d-8032-4413-9710-f7e77d377321")
+		)
+		(pin "1"
+			(uuid "506ebd32-ee30-418f-b817-f53e7537fb54")
+		)
+		(pin "5"
+			(uuid "db47bf46-e5bc-4617-bc87-f245090d4eec")
+		)
+		(pin "2"
+			(uuid "08732b01-5109-4db9-923b-bad0cc8c0e00")
+		)
+		(pin "7"
+			(uuid "132f7b9b-1c84-40d3-85b7-b2530fcf91b2")
+		)
+		(pin "3"
+			(uuid "eba14f78-95e1-439d-b84a-d5e95bed4b55")
+		)
+		(pin "4"
+			(uuid "31937b65-b81e-4dbe-9997-c1f000e003a8")
+		)
+		(pin "6"
+			(uuid "4eb939b8-72ff-48ea-b712-492ba0f87368")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "R3")
+					(unit 2)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "R2")
+					(unit 2)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "R8")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 142.24 22.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "05b70dde-d02c-439b-92b4-ce1815063703")
+		(property "Reference" "#P+07"
+			(at 142.24 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 139.7 25.4 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "91d4beee-3111-4160-bc7c-0f1bd276ee00")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+016")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+07")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 81.28 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0caa7e12-8320-40ee-a710-219dc02da47f")
+		(property "Reference" "#P+03"
+			(at 81.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 78.74 27.94 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f6a3d84-1529-4a52-9e02-b1e241426a54")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+012")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+03")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:STEMMA_I2C_QT")
+		(at 256.54 22.86 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "11fa4b28-2800-4ff3-99ec-526f1b321da9")
+		(property "Reference" "CONN4"
+			(at 252.73 14.605 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Value" "STEMMA_I2C_QT"
+			(at 252.73 30.48 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "lixo:JST_SH4"
+			(at 256.54 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 256.54 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "434127c6-4c5d-4101-af34-336dd12bb19a")
+		)
+		(pin "MT2"
+			(uuid "9c52daaa-1ac0-47d0-9a16-60ed2c350551")
+		)
+		(pin "1"
+			(uuid "391a018a-6065-4bd8-9c47-63b678dd91d0")
+		)
+		(pin "2"
+			(uuid "40b3cd78-b163-4240-8142-f3d0cf287572")
+		)
+		(pin "4"
+			(uuid "6a7a96d1-63ca-4f21-b1f2-7e2d99096e20")
+		)
+		(pin "MT1"
+			(uuid "771a84e6-38c0-4cbb-b780-d0a03e7fdb78")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "CONN6")
+					(unit 3)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "CONN4")
+					(unit 3)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "CONN10")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:GND")
+		(at 30.48 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17147b51-aab3-4786-ab0f-7cef2afe2118")
+		(property "Reference" "#U$01"
+			(at 30.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 28.956 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7e5081f-153a-44a9-9b2f-5cb2c4774959")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#U$06")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#U$01")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#U$011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:RESISTOR_4PACK")
+		(at 142.24 33.02 90)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1d95418a-6ce4-410f-9c3a-da9632cf5b8a")
+		(property "Reference" "R3"
+			(at 139.7 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 142.24 33.02 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+					(thickness 0.2032)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" "lixo:RESPACK_4X0603"
+			(at 142.24 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f3ffb1c2-652c-40de-80ef-6757abf7495a")
+		)
+		(pin "3"
+			(uuid "0eb100ff-99b3-4060-b5e6-0af121cf5e9e")
+		)
+		(pin "8"
+			(uuid "801678b0-658a-4083-9c5b-6fdc7f6c2dd6")
+		)
+		(pin "7"
+			(uuid "2eeee782-8170-4a0c-bdc3-505887d649ae")
+		)
+		(pin "6"
+			(uuid "da876f04-d989-43a6-8a61-4e62884911cc")
+		)
+		(pin "4"
+			(uuid "73025ec1-9018-422a-bc0c-d1527c5fb630")
+		)
+		(pin "5"
+			(uuid "7baa3b12-ca60-486c-9bdd-13aaa6aad6bf")
+		)
+		(pin "1"
+			(uuid "f8f22ea3-cb13-4b58-9859-b5adacb94496")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "R8")
+					(unit 4)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "R3")
+					(unit 4)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "R10")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:RESISTOR_4PACK")
+		(at 149.86 33.02 90)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "217c9166-9d85-4572-b440-81adcb8c838e")
+		(property "Reference" "R3"
+			(at 147.32 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 149.86 33.02 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+					(thickness 0.2032)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" "lixo:RESPACK_4X0603"
+			(at 149.86 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "f28bb62f-4a39-467f-86b2-1922583cbbca")
+		)
+		(pin "2"
+			(uuid "fc8bea5c-11bb-46b0-a62e-e6b190e6f26b")
+		)
+		(pin "8"
+			(uuid "c592a6d1-b68e-4faf-a1c0-eb8bc199ecb6")
+		)
+		(pin "3"
+			(uuid "fe0bc024-a770-4dbc-8a88-7d6a8d6b0631")
+		)
+		(pin "4"
+			(uuid "7e8a1993-45e0-41be-86c1-23f0109037d0")
+		)
+		(pin "1"
+			(uuid "fdef84c8-6e5b-4616-a948-1326f16f0b1c")
+		)
+		(pin "7"
+			(uuid "9ff796de-dda4-452d-b5c0-aec366f6342f")
+		)
+		(pin "6"
+			(uuid "7ffcd50b-a1da-4cf6-8be8-949d5d28e684")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "R8")
+					(unit 3)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "R3")
+					(unit 3)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "R10")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 172.72 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2928c0c6-863f-4e3f-9fc9-8abfdb215203")
+		(property "Reference" "#P+09"
+			(at 172.72 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 170.18 83.82 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae9cc0c1-ca3f-4d2e-818b-a86893777c3c")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+018")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+09")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:GND")
+		(at 116.84 78.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2e9ef400-2bb7-4ef4-bb67-e7bcdab9c2d4")
+		(property "Reference" "#U$04"
+			(at 116.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 118.364 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 116.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8ce3ea56-ecf2-4d2e-a929-4c364c90d877")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#U$09")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#U$04")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#U$014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:RESISTOR_4PACK")
+		(at 116.84 88.9 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30a6f34f-c0e2-475f-9b48-979ad625d9bd")
+		(property "Reference" "R3"
+			(at 119.38 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 116.84 88.9 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+					(thickness 0.2032)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" "lixo:RESPACK_4X0603"
+			(at 116.84 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 116.84 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "46099323-0713-4bd2-9166-f35a672f70cd")
+		)
+		(pin "2"
+			(uuid "aacff370-f11c-47f3-8fba-b03ba2f70ec3")
+		)
+		(pin "1"
+			(uuid "3f15347e-b165-4ae2-87bd-c20a08426ed6")
+		)
+		(pin "3"
+			(uuid "ecd0b37f-bcbb-4674-b332-24aaf616f55b")
+		)
+		(pin "6"
+			(uuid "c962e229-c375-4d48-9ed1-1a8ad395b5c2")
+		)
+		(pin "5"
+			(uuid "942c2b03-9c45-4471-a5f9-d19ce2864e21")
+		)
+		(pin "7"
+			(uuid "2a6d0614-98b6-454f-9600-9160a3221574")
+		)
+		(pin "4"
+			(uuid "0298d235-9671-4086-997e-22d7a8b133e2")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "R3")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "R3")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:CAP_CERAMIC0603_NO")
+		(at 81.28 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "34bdd8ac-5968-412a-bba3-199b50883af8")
+		(property "Reference" "C2"
+			(at 78.99 36.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 83.58 36.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lixo:0603-NO"
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d25e7e55-ad9e-4e3c-a667-6bff5e606bad")
+		)
+		(pin "2"
+			(uuid "0efaab5d-7d6b-4675-8623-c972a25b12df")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "C8")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "C2")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:STEMMA_I2C_QT")
+		(at 226.06 22.86 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "46a5c4cc-6f82-4fa4-a60a-a7293111f87e")
+		(property "Reference" "CONN1"
+			(at 222.25 14.605 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Value" "STEMMA_I2C_QT"
+			(at 222.25 30.48 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "lixo:JST_SH4"
+			(at 226.06 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "3fc2f1ad-d161-4538-b656-f4ed4b1e987b")
+		)
+		(pin "MT1"
+			(uuid "b44b16bb-3c13-489b-8210-b156674a4119")
+		)
+		(pin "1"
+			(uuid "c46a568a-3345-4d4a-b804-ce0d69687800")
+		)
+		(pin "2"
+			(uuid "56304df4-462b-48a0-bea1-c705bde97b8a")
+		)
+		(pin "4"
+			(uuid "1814e67b-fdde-41d2-b589-00a3926a95a2")
+		)
+		(pin "MT2"
+			(uuid "68b31520-a8af-4902-b023-36d767198f50")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "CONN7")
+					(unit 3)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "CONN1")
+					(unit 3)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "CONN8")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 149.86 22.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "56b61fb1-1428-43ba-91e6-6c49036ef486")
+		(property "Reference" "#P+08"
+			(at 149.86 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 147.32 25.4 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b388f705-42cc-4434-931a-0ec490acf3ee")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+017")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+08")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 30.48 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "57a11749-bbea-481c-a493-7771afa9e706")
+		(property "Reference" "#P+01"
+			(at 30.48 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 27.94 27.94 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf118181-cf67-4b89-bc83-22be21bc5b76")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+010")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+01")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 111.76 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5dd45d80-e914-4a7c-8098-6c169ae3d82d")
+		(property "Reference" "#P+06"
+			(at 111.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 109.22 81.28 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2fa4244-2bed-4c81-a0b0-b263b3e67c41")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+015")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+06")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 99.06 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "77bf0d50-572c-465c-9149-b4eaf95f7f02")
+		(property "Reference" "#P+04"
+			(at 99.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 96.52 27.94 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ded1af0d-f39f-426f-9c0e-b358567178aa")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+013")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+04")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 53.34 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7df19058-7e76-408a-9135-3ccb6008b3b2")
+		(property "Reference" "#P+02"
+			(at 53.34 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 50.8 76.2 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "494029fa-1776-4e2e-ba5d-25ad3684d705")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+011")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+02")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:LED0603_NOOUTLINE")
+		(at 99.06 45.72 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7feb8ddc-4eb0-4c14-8217-279967e2480a")
+		(property "Reference" "D1"
+			(at 103.505 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+			)
+		)
+		(property "Value" "GREEN"
+			(at 96.266 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+			)
+		)
+		(property "Footprint" "lixo:CHIPLED_0603_NOOUTLINE"
+			(at 99.06 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "088c3234-fa8b-4e3a-b848-9cbf44dc9e55")
+		)
+		(pin "C"
+			(uuid "9f22a188-4eb4-4a11-8bf3-bcd7b2699ba5")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "D4")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "D1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:GND")
+		(at 81.28 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8057ee9a-7fbe-4569-9ceb-9e93cf1b53e2")
+		(property "Reference" "#U$03"
+			(at 81.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 79.756 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 81.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "95f69431-aaeb-4dd1-a14a-2f6c0c898a11")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#U$08")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#U$03")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#U$013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:STEMMA_I2C_QT")
+		(at 226.06 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "821bcd35-e335-41fd-aef8-14a3adcd1127")
+		(property "Reference" "CONN3"
+			(at 222.25 32.385 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "STEMMA_I2C_QT"
+			(at 222.25 48.26 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "lixo:JST_SH4"
+			(at 226.06 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "142c1b98-df96-4069-97d0-f8c2ff3de618")
+		)
+		(pin "MT1"
+			(uuid "6c0903e2-08b1-4d27-b431-2bae8a9bc1d8")
+		)
+		(pin "2"
+			(uuid "0a2a2d49-f49b-4753-b66b-9738b79dd535")
+		)
+		(pin "MT2"
+			(uuid "5819f0ab-600b-4a02-b35e-f53148249374")
+		)
+		(pin "1"
+			(uuid "426e2ccc-c2e0-4934-a6f3-830610e1c750")
+		)
+		(pin "3"
+			(uuid "d2e45948-89ef-43e7-88d0-af1e9a6b840a")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "CONN8")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "CONN3")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "CONN8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:GND")
+		(at 71.12 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8af49d71-737e-49b6-8a4b-5c617b284584")
+		(property "Reference" "#U$02"
+			(at 71.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 69.596 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dbb3005a-1e56-4024-bcf1-5af504bfcb3a")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#U$07")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#U$02")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#U$012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:CAP_CERAMIC0805-NOOUTLINE")
+		(at 30.48 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91a285e4-6bfa-4039-b478-cfb93b617135")
+		(property "Reference" "C1"
+			(at 28.19 34.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 32.78 34.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lixo:0805-NO"
+			(at 30.48 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a43c3e7-774a-4af5-a1c5-b24e039a843e")
+		)
+		(pin "2"
+			(uuid "debed12e-be62-4839-8b23-954a9d776c7f")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "C7")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "C1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:VCC")
+		(at 104.14 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a9297c56-5de5-4387-9a52-4cb07f6003c4")
+		(property "Reference" "#P+05"
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 101.6 81.28 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e4b1b9e6-b32e-4cd0-8db3-767d7a6fcc50")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#P+014")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#P+05")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#P+023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:HEADER-1X670MIL")
+		(at 63.5 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bff8802b-d7c0-4785-8f2a-b3d04896a86e")
+		(property "Reference" "JP1"
+			(at 57.15 78.105 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "HEADER-1X670MIL"
+			(at 57.15 99.06 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "lixo:1X06_ROUND_70"
+			(at 63.5 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "0c69f420-c015-415e-ae28-af776fa16932")
+		)
+		(pin "6"
+			(uuid "3cc37694-985e-44c2-b338-0b463fe1a765")
+		)
+		(pin "2"
+			(uuid "af28eb2b-f0d1-4042-b012-25b1acb90a6a")
+		)
+		(pin "1"
+			(uuid "ad48c7da-213f-4f3c-9c63-6055cfd02b3c")
+		)
+		(pin "3"
+			(uuid "314f12da-f0b3-4465-9171-71276dbe448a")
+		)
+		(pin "5"
+			(uuid "b22b9e3e-de97-4c01-8da3-e843ef4f4b09")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "JP2")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "JP1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "JP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:GND")
+		(at 172.72 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c6d7bdbe-1290-4de8-b662-7df34e8497d4")
+		(property "Reference" "#U$05"
+			(at 172.72 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 171.196 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 172.72 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "580ef0c5-dc48-4aa6-93fb-0acdb0cf4295")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#U$010")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#U$05")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#U$015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:STEMMA_I2C_QT")
+		(at 226.06 25.4 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cbf01a91-07a0-4c97-a420-97421ab069f2")
+		(property "Reference" "CONN2"
+			(at 222.25 17.145 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Value" "STEMMA_I2C_QT"
+			(at 222.25 33.02 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "lixo:JST_SH4"
+			(at 226.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "be5b9f2a-628f-4673-9833-1743591f13c3")
+		)
+		(pin "MT1"
+			(uuid "07c2df65-8b52-420c-b9dd-9f947e7460dc")
+		)
+		(pin "3"
+			(uuid "61cc5cf7-35bd-4d0d-82d8-39f0bba69615")
+		)
+		(pin "4"
+			(uuid "d3656280-7dc2-4bcb-806f-c9509892bc48")
+		)
+		(pin "2"
+			(uuid "e6f1bc8e-c3ec-4ab7-b04a-aafbcb8ee288")
+		)
+		(pin "MT2"
+			(uuid "c491fdfd-173e-488a-b390-d9425fced7ee")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "CONN7")
+					(unit 2)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "CONN2")
+					(unit 2)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "CONN8")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Temperature:TMP117xxDRV")
+		(at 67.31 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf2158d8-70ad-419e-bbf5-acc290645866")
+		(property "Reference" "U1"
+			(at 82.55 119.3098 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TMP117xxDRV"
+			(at 82.55 121.8498 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm"
+			(at 68.58 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmp117.pdf"
+			(at 68.58 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Digital Temperature Sensor with I2C/SMBus Interface, 16 bits, ±0.3°C, one-shot conversion, alert, nist traceable, EEPROM, WSON"
+			(at 67.31 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "55fa9bd2-044f-4c8f-a22c-5e80c8ec59d1")
+		)
+		(pin "1"
+			(uuid "d812b619-7464-4edb-9ec9-62b7306c2c14")
+		)
+		(pin "5"
+			(uuid "65184e50-797a-4341-8fc5-1f0c11245069")
+		)
+		(pin "6"
+			(uuid "adbbbe97-7e3a-4b63-bce1-1d076301ed11")
+		)
+		(pin "4"
+			(uuid "88f85f6e-7b4d-4522-9178-c07bbc2d3f75")
+		)
+		(pin "2"
+			(uuid "9285d394-0f47-4643-bcbb-bb37ccbca674")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "U2")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "U1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:STEMMA_I2C_QT")
+		(at 259.08 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e08e52ee-1677-4b07-b0f5-432f20173bfc")
+		(property "Reference" "CONN6"
+			(at 255.27 32.385 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "STEMMA_I2C_QT"
+			(at 255.27 48.26 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "lixo:JST_SH4"
+			(at 259.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8cc39a05-c2af-40a8-8c69-47a5c2424b8f")
+		)
+		(pin "MT1"
+			(uuid "1c0fa4b3-c112-4b8b-93d2-14cd4b164aa8")
+		)
+		(pin "1"
+			(uuid "18e55685-6539-4499-95a2-203758fc60a4")
+		)
+		(pin "3"
+			(uuid "a3d5f3be-d7ab-4370-8868-ce70e8709a60")
+		)
+		(pin "4"
+			(uuid "93a6c399-f55d-4f4f-a741-c2b54d1032ff")
+		)
+		(pin "MT2"
+			(uuid "39d54d23-d8da-4280-a486-6db64457121a")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "CONN10")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "CONN6")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "CONN10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:SOLDERJUMPER")
+		(at 111.76 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2aeea4b-a555-4df4-b6de-63aac0a06775")
+		(property "Reference" "SJ1"
+			(at 109.22 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "SOLDERJUMPER"
+			(at 115.57 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "lixo:SOLDERJUMPER_ARROW_NOPASTE"
+			(at 111.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b92470c-dff8-4154-b6d7-b4118882ddc8")
+		)
+		(pin "2"
+			(uuid "00fb213f-3671-492f-9df9-18cf5de95451")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "SJ2")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "SJ1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "SJ3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:RESISTOR_0603_NOOUT")
+		(at 99.06 33.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e84662f6-3274-4788-bb8b-81c3c015be08")
+		(property "Reference" "R1"
+			(at 96.52 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RESISTOR_0603_NOOUT"
+			(at 99.06 33.02 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+					(thickness 0.2032)
+					(bold yes)
+				)
+			)
+		)
+		(property "Footprint" "lixo:0603-NO"
+			(at 99.06 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "47fd6ee8-95c9-4658-9b22-ad4579b1c991")
+		)
+		(pin "1"
+			(uuid "c46d6c19-a54f-487b-8745-2ae887e709b0")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "R7")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "R1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:TMP117_WSON")
+		(at 154.94 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef384524-1c87-499f-9e0f-5dfa941cd9eb")
+		(property "Reference" "X1"
+			(at 144.78 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "TMP117_WSON"
+			(at 144.78 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "lixo:WSON-6"
+			(at 154.94 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "a15c0614-c12f-41ba-92f6-ce582b5366a3")
+		)
+		(pin "4"
+			(uuid "32894863-4d01-46d4-95b3-0e789af9eb98")
+		)
+		(pin "5"
+			(uuid "2ff6a6e7-9654-449f-bf51-1c2f15b10181")
+		)
+		(pin "2"
+			(uuid "9cc8e3cc-86bb-4c8b-ac7d-9c7c91717a94")
+		)
+		(pin "6"
+			(uuid "50755197-bd31-40e0-8172-5c8d0a17e81a")
+		)
+		(pin "1"
+			(uuid "f6cbfa1f-05cf-4fea-a467-c8f4e5f7b65d")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "X2")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "X1")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "X3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:supply1_371_GND")
+		(at 99.06 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2d188da-da11-4854-b238-4197c1a98d85")
+		(property "Reference" "#GND01"
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.52 53.34 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc8879d1-17e3-4e4b-8dee-1a5e7a0a9d9f")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "#GND02")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "#GND01")
+					(unit 1)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "#GND03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lixo-eagle-import:STEMMA_I2C_QT")
+		(at 256.54 25.4 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3824cff-1fec-4ee2-9626-41d4d9b015ca")
+		(property "Reference" "CONN5"
+			(at 252.73 17.145 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Value" "STEMMA_I2C_QT"
+			(at 252.73 33.02 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "lixo:JST_SH4"
+			(at 256.54 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 256.54 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5737613-5ecc-4597-8318-5f164c2b2baa")
+		)
+		(pin "2"
+			(uuid "0d1df5c4-0025-4678-8d05-52fac1c1341b")
+		)
+		(pin "MT2"
+			(uuid "96cfa6c1-d768-4584-8f62-2271f86227fa")
+		)
+		(pin "3"
+			(uuid "c816e81e-b3d5-4aab-9665-2e1900243df7")
+		)
+		(pin "MT1"
+			(uuid "4981a405-8e7c-48b7-8c4c-dbc726a868d8")
+		)
+		(pin "4"
+			(uuid "d5508815-67b3-4a88-9b68-a455cabbf13e")
+		)
+		(instances
+			(project "final"
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/667bd29e-ea99-41ff-a14e-dfb84ca4f4cf"
+					(reference "CONN9")
+					(unit 2)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/a250f18f-8f14-4a95-b906-c857733cc871"
+					(reference "CONN5")
+					(unit 2)
+				)
+				(path "/0a7ecbe5-8e20-4dcf-b187-cc4e234a0dce/e0c64fce-744c-4d8e-9c18-975de7e16128"
+					(reference "CONN10")
+					(unit 2)
+				)
+			)
+		)
+	)
+)

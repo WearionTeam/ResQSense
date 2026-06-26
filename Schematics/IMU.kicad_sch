@@ -1,0 +1,96 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "214d2ce7-6dfa-44b1-a6e9-5fdf0b0cb39c")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "VCC"
+		(shape input)
+		(at 43.18 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "47f52904-3e8a-47a1-9d56-80b977e8e457")
+	)
+	(hierarchical_label "GNDD"
+		(shape input)
+		(at 43.18 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a49d")
+	)
+	(hierarchical_label "SCL"
+		(shape input)
+		(at 43.18 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a49e")
+	)
+	(hierarchical_label "SDA"
+		(shape input)
+		(at 43.18 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a49f")
+	)
+	(hierarchical_label "XDA"
+		(shape input)
+		(at 44.45 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a4a0")
+	)
+	(hierarchical_label "XCL"
+		(shape input)
+		(at 43.18 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a4a1")
+	)
+	(hierarchical_label "AD0"
+		(shape input)
+		(at 43.18 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a4a2")
+	)
+	(hierarchical_label "INT"
+		(shape input)
+		(at 43.18 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7804e53-75c2-489b-a817-6af8d9a9a4a3")
+	)
+)

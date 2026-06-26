@@ -1,0 +1,140 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "ebd5a956-abe8-42e4-8855-a39e1b1d790b")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 59.69 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca1346")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 59.69 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca1347")
+	)
+	(hierarchical_label "RX"
+		(shape input)
+		(at 59.69 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca1348")
+	)
+	(hierarchical_label "TX"
+		(shape input)
+		(at 59.69 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca1349")
+	)
+	(hierarchical_label "INT"
+		(shape input)
+		(at 59.69 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca134a")
+	)
+	(hierarchical_label "NC"
+		(shape input)
+		(at 59.69 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca134b")
+	)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 38.1 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca134c")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 38.1 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca134d")
+	)
+	(hierarchical_label "SCL"
+		(shape input)
+		(at 38.1 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca134e")
+	)
+	(hierarchical_label "SDA"
+		(shape input)
+		(at 38.1 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca134f")
+	)
+	(hierarchical_label "RST"
+		(shape input)
+		(at 36.83 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca1350")
+	)
+	(hierarchical_label "NC"
+		(shape input)
+		(at 38.1 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "714b4b70-80ba-4d08-9eda-a2161eca1351")
+	)
+)

@@ -1,0 +1,173 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "c93aa8cf-b391-42bb-91a8-848e79abd897")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "DSI1_DP0(Data)"
+		(shape input)
+		(at 186.69 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "24a917f8-595c-4149-ba89-dfe786b3ee58")
+	)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 259.08 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "402f2fa7-3398-4485-97c8-201d317fe347")
+	)
+	(hierarchical_label "DSI1_CP(Clock)"
+		(shape input)
+		(at 139.7 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49d75c73-7e7e-4652-8a8c-763dc3c47db3")
+	)
+	(hierarchical_label "DSI1_CN(Clock)"
+		(shape input)
+		(at 120.65 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4d7c8086-fd24-4999-8c36-a1942c529fb5")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 101.6 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "539a7cf6-e0fc-428c-9279-ed43aacf9c2c")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 238.76 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "83da4845-902b-4ac5-94f7-0cab28e5c83f")
+	)
+	(hierarchical_label "DSI1_DP1(Data)"
+		(shape input)
+		(at 93.98 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "84836267-f31d-40fc-a919-947e7c4a506c")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 148.59 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aba8b7bf-9f80-450b-97f9-5f0ec405fc1a")
+	)
+	(hierarchical_label "SCL0(Touch)"
+		(shape input)
+		(at 210.82 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b10ccacb-43d0-4d05-9680-8a04c3b09192")
+	)
+	(hierarchical_label "SDA0(Touch)"
+		(shape input)
+		(at 228.6 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cc7118ac-55e7-43b5-8f02-77ac2ba3b186")
+	)
+	(hierarchical_label "DSI1_DN0(Data)"
+		(shape input)
+		(at 167.64 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cd432dc1-0724-4c54-8e84-b11c5d070d61")
+	)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 250.19 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cdbd64c6-91b9-4623-aa3a-cd406e32df7f")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 55.88 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d2ffcf86-cadb-4b3e-b85b-15131ded5e1c")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 195.58 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "db0b8a22-3525-42c0-86ab-b1ba132b4c25")
+	)
+	(hierarchical_label "DSI1_DN1(Data)"
+		(shape input)
+		(at 74.93 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dc6a64ed-268a-41b2-a955-1d161d8cfa64")
+	)
+)
