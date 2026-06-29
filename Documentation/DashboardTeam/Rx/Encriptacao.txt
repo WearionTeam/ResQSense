@@ -1,0 +1,7 @@
+
+Encryption Strategy
+
+The protection of biomedical data is a critical requirement. The system's communication architecture, based on a LoRa Mesh network, requires security to be implemented directly at the application layer.
+To this end, a unified method was selected: Symmetric Encryption using the AES-128-CTR (Advanced Encryption Standard, 128-bit, Counter Mode) algorithm. Key management is ensured by a Pre-Shared Key (PSK), a 128-bit secret key shared between the ESP32 firmware and the Python software on the Raspberry Pi.
+This choice is justified by its suitability for the two challenges of the system. For data in transit, AES-CTR mode is ideal for the LoRa environment. Its low overhead (additional bytes) ensures that the encrypted payload still fits into LoRa's restricted data packets, ensuring confidentiality against radio sniffing.
+For data at rest, this strategy is pragmatically reused. The Python application encrypts the data with the same AES-128-CTR before inserting it into the database. The main advantage is development efficiency and code reuse, which ensure that data on the SD card is protected against unauthorized access (physical or logical), while keeping the implementation effort focused on the core objectives of the project. If the .db file is compromised, sensitive data remains unreadable.

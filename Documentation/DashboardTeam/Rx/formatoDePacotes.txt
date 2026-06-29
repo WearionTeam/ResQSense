@@ -1,0 +1,23 @@
+Dual-format architecture to optimize efficiency and flexibility:
+
+Format 1: Binary (Vest -> Gateway) A compact binary is sent via LoRa from the vest to the Gateway (connected to the Raspberry Pi). Justification: Maximizes battery life and LoRa transmission reliability.
+
+Format 2: JSON (Gateway -> Python App) The Gateway (on the Raspberry Pi) decodes the binary and passes the data to the app via JSON. Justification: It is the native format for the Python app (import json) and decouples the processes.
+
+Example Message (JSON):
+{
+  "operatorId": 3,
+  "biometricData": {
+    "heartRate": 165,
+    "oxygenation": 91
+  },
+  "baselineData": {
+    "baselineHeartRate": 68
+  },
+  "location": {
+    "distance": 45.2
+  },
+  "alert": {
+    "description": "Low SpO2"
+  }
+}
